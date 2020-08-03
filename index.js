@@ -13,7 +13,7 @@ const defaultOptions = {
         processEscapes: true,
     },
     TeX: {
-        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']
+        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'cancel.js', 'noUndefined.js']
     }
 };
 
