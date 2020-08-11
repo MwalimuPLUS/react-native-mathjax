@@ -13,7 +13,7 @@ const defaultOptions = {
         processEscapes: true,
     },
     TeX: {
-        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'cancel.js', 'noUndefined.js']
+        extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js','cancel.js']
     }
 };
 
@@ -38,13 +38,18 @@ function MathJax(props) {
                     MathJax.Hub.Queue(function() {
                         var height = document.documentElement.scrollHeight;
                         window.postMessage(String(height));
-                        document.getElementById("formula").style.visibility = '';
+                        document.getElementById("formula").style.visibility = "visible";
                     });
                 </script>
+                <script >
+                  setTimeout(function(){ document.getElementById("formula").style.visibility = "visible"; }, 3000);
+               </script>
                 <script src="https://mathjax.mwalimuplus.com/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-                <p id="formula" style="visibility: hidden;">
+                <div id="formula" style="visibility: hidden;">
                     ${html}
-			</p>`;
+			          </div>
+
+                `;
         }
     }
 
