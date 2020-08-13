@@ -42,7 +42,7 @@ function MathJax(props) {
                     });
                 </script>
                 <script >
-                  setTimeout(function(){ document.getElementById("formula").style.visibility = "visible"; }, 3000);
+                  setTimeout(function(){ document.getElementById("formula").style.visibility = "visible"; }, 5000);
                </script>
                 <script src="https://mathjax.mwalimuplus.com/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
                 <div id="formula" style="visibility: hidden;">
@@ -65,7 +65,7 @@ function MathJax(props) {
         <AutoHeightWebView
             style={calculatedStyles}
             source={{html: calculatedHtml}}
-            scalesPageToFit={true}
+            scalesPageToFit={false}
             onSizeUpdated={onSizeUpdated}
             viewportContent={'width=device-width, user-scalable=yes'}
             {...calculatedProps}
