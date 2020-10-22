@@ -18,7 +18,8 @@ const defaultOptions = {
 };
 
 function MathJax(props) {
-    const {html, mathJaxOptions, styles} = props;
+
+    const {html, fontSize, mathJaxOptions, styles} = props;
 
     //wrap html in math jaxx.
     function wrapMathjax() {
@@ -45,9 +46,9 @@ function MathJax(props) {
                   setTimeout(function(){ document.getElementById("formula").style.visibility = "visible"; }, 5000);
                </script>
                 <script src="https://mathjax.mwalimuplus.com/MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-                <div id="formula" style="visibility: hidden;font-size:12px;padding-bottom:25px;">
+                <div id="formula" style="visibility:hidden; font-size:${fontSize ? fontSize : '12px' }; padding-bottom:25px;">
                     ${html}
-		</div>
+		            </div>
                 `;
         }
     }
